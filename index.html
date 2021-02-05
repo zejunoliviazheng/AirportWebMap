@@ -86,8 +86,8 @@
       // Then each (point) feature will bind a popup window.
       // The content of the popup window is the value of `feature.properties.company`
       onEachFeature: function (feature, layer) {
-          layer.bindPopup(feature.properties.LICENSEE);
-          return feature.properties.LOCCOUNTY;
+          layer.bindPopup(feature.properties.AIRPT_NAME);
+          return feature.properties.COUNTY;
       },
       pointToLayer: function (feature, latlng) {
           var id = 0;
