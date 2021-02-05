@@ -73,11 +73,11 @@
 
 
   // 4. build up a set of colors from colorbrewer's dark2 category
-  var colors = chroma.scale('Dark2').mode('lch').colors(2);
+  var colors = chroma.scale('Dark2').mode('lch').colors(3);
 
   // 5. dynamically append style classes to this page. This style classes will be used for colorize the markers.
   for (i = 0; i < 2; i++) {
-      $('head').append($("<style> .marker-color-" + (i).toString() + " { color: " + colors[i] + "; font-size: 15px; text-shadow: 0 0 3px #ffffff;} </style>"));
+      $('head').append($("<style> .marker-color-" + (i+1).toString() + " { color: " + colors[i] + "; font-size: 18px; text-shadow: 0 0 3px #ffffff;} </style>"));
   }
 
   // Get GeoJSON and put on it on the map when it loads
@@ -93,7 +93,7 @@
           var id = 0;
           if (feature.properties.CNTL_TWR == "Y") { id = 0; }
           else if (feature.properties.CNTL_TWR == "N")  { id = 1; }
-          return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-plane marker-color-'+ (id) .toString() })});
+          return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-plane marker-color-'+ (id+1) .toString() })});
       },
       attribution: 'US Airport Data &copy; USGS | US States &copy; Mike Bostock | Base Map &copy; CartoDB | Made By Zejun Zheng'
   }).addTo(mymap);
@@ -146,8 +146,8 @@
       div.innerHTML += '<i style="background: ' + colors[1] + '; opacity: 0.5"></i><p> 2-12 </p>';
       div.innerHTML += '<i style="background: ' + colors[0] + '; opacity: 0.5"></i><p> 0 </p>';
       div.innerHTML += '<hr><b>Air Traffic Control Tower<b><br />';
-      div.innerHTML += '<i class="fa fa-plane marker-color-0" style="color:green"></i><p> Yes </p>';
-      div.innerHTML += '<i class="fa fa-plane marker-color-1" style="color:red"></i><p> No </p>';
+      div.innerHTML += '<i class="fa fa-plane marker-color-1" ></i><p> Yes </p>';
+      div.innerHTML += '<i class="fa fa-plane marker-color-2" ></i><p> No </p>';
 
       // Return the Legend div containing the HTML content
       return div;
