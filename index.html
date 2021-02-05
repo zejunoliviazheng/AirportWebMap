@@ -110,14 +110,14 @@
   }).addTo(mymap);
 
   // 6. Set function for color ramp
-  colors = chroma.scale('YlOrRd').colors(5);
+  colors = chroma.scale('OrRd').colors(5);
 
   function setColor(density) {
       var id = 0;
-      if (density > 61) { id = 4; }
-      else if (density > 46 && density <= 60) { id = 3; }
-      else if (density > 12 && density <= 45) { id = 2; }
-      else if (density > 3 &&  density <= 11) { id = 1; }
+      if (density > 32) { id = 4; }
+      else if (density > 23 && density <= 32) { id = 3; }
+      else if (density > 13 && density <= 22) { id = 2; }
+      else if (density > 2 &&  density <= 12) { id = 1; }
       else  { id = 0; }
       return colors[id];
   }
