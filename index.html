@@ -87,7 +87,7 @@
       // The content of the popup window is the value of `feature.properties.company`
       onEachFeature: function (feature, layer) {
           layer.bindPopup(feature.properties.AIRPT_NAME);
-          return feature.properties.COUNTY;
+          return feature.properties.CNTL_TWR;
       },
       pointToLayer: function (feature, latlng) {
           var id = 0;
