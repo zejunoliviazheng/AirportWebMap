@@ -5,7 +5,7 @@
   The map has shown the number of airports in each state, the larger the number of airports, the darker the color of the state. As shown in the map, California, Texas and Alaska  have the largest number of airports in the US, each of them has over 32 airports. All the states have at least one airport. 
   The map also demonstrates whether the airport has an air traffic control tower or not, if the airport has an air traffic control tower, it will display in green, otherwise, it will be red. As shown in the map, most airports in the US have the air traffic control tower. The airports that have air traffic control towers are more than the airports that do have air traffic control towers. 
 
-The web map can be viewed at: http://zejunoliviazheng.github.io/AirportWebMap/
+The web map can be viewed at: http://zejunoliviazheng.github.io/AirportWebMap/index.html
 ![Map Image](img/airportwebmap.png)
 
 ## Acknowledgement
